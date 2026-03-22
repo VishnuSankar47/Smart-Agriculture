@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block nav %}
+<nav>
+    <span style="font-size:18px;font-weight:700;">🌾 Smart Agriculture</span>
+    <div>
+        <a href="/viewProductCategoryUser">Shop</a>
+        <a href="/Viewcart">My Cart</a>
+        <a href="/Userhistory">Orders</a>
+        <a href="/Sendcompliant">Complaint</a>
+        <a href="/Viewcompliant">My Complaints</a>
+        <a href="/logout">Logout</a>
+    </div>
+</nav>
+{% endblock %}
+{% block content %}
+<div class="container">
+    <h2>Welcome!</h2>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px;">
+        <a href="/viewProductCategoryUser" style="text-decoration:none;">
+            <div style="background:white;padding:24px;border-radius:8px;text-align:center;border-left:4px solid #2d6a2d;">
+                <div style="font-size:28px;">🛍️</div>
+                <div style="font-weight:600;margin-top:8px;">Browse Products</div>
+            </div>
+        </a>
+        <a href="/Viewcart" style="text-decoration:none;">
+            <div style="background:white;padding:24px;border-radius:8px;text-align:center;border-left:4px solid #e67e22;">
+                <div style="font-size:28px;">🛒</div>
+                <div style="font-weight:600;margin-top:8px;">My Cart</div>
+            </div>
+        </a>
+        <a href="/Userhistory" style="text-decoration:none;">
+            <div style="background:white;padding:24px;border-radius:8px;text-align:center;border-left:4px solid #2471a3;">
+                <div style="font-size:28px;">📋</div>
+                <div style="font-weight:600;margin-top:8px;">Order History</div>
+            </div>
+        </a>
+    </div>
+</div>
+{% endblock %}
