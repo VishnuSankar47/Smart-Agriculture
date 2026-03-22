@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block nav %}
+<nav>
+    <span style="font-size:18px;font-weight:700;">🌾 Farmer Portal</span>
+    <div>
+        <a href="/viewProductCategoryFarmer">Categories</a>
+        <a href="/viewFarmeraddeditem">My Products</a>
+        <a href="/Farmersellhistory">Sales History</a>
+        <a href="/logout">Logout</a>
+    </div>
+</nav>
+{% endblock %}
+{% block content %}
+<div class="container">
+    <h2>Farmer Dashboard</h2>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px;">
+        <a href="/viewProductCategoryFarmer" style="text-decoration:none;">
+            <div style="background:white;padding:24px;border-radius:8px;text-align:center;border-left:4px solid #2d6a2d;">
+                <div style="font-size:28px;">🗂️</div>
+                <div style="font-weight:600;margin-top:8px;">View Categories</div>
+            </div>
+        </a>
+        <a href="/viewFarmeraddeditem" style="text-decoration:none;">
+            <div style="background:white;padding:24px;border-radius:8px;text-align:center;border-left:4px solid #e67e22;">
+                <div style="font-size:28px;">📦</div>
+                <div style="font-weight:600;margin-top:8px;">My Products</div>
+            </div>
+        </a>
+        <a href="/Farmersellhistory" style="text-decoration:none;">
+            <div style="background:white;padding:24px;border-radius:8px;text-align:center;border-left:4px solid #2471a3;">
+                <div style="font-size:28px;">📊</div>
+                <div style="font-weight:600;margin-top:8px;">Sales History</div>
+            </div>
+        </a>
+    </div>
+</div>
+{% endblock %}
