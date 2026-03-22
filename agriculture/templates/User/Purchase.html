@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block nav %}
+<nav>
+    <span style="font-size:18px;font-weight:700;">🌾 Smart Agriculture</span>
+    <div><a href="/UserHome">Home</a><a href="/Viewcart">Cart</a><a href="/logout">Logout</a></div>
+</nav>
+{% endblock %}
+{% block content %}
+<div class="container" style="margin-top:40px;">
+    <div class="form-card">
+        <h2>Confirm Booking</h2>
+        <form method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <label>Shipping Address</label>
+                <textarea name="shipping_address" rows="4" placeholder="Enter your delivery address..." required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Add to Cart</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
