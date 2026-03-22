@@ -242,7 +242,7 @@ def Purchase(request, id, qid):
     sid = request.session.get('sid')
     lid = request.session.get('lid')
     if request.method == "POST":
-        total_amount_user = int(qid) * int(sid)
+        total_amount_user = int(float(qid)) * int(float(sid))
         shipping_address = request.POST['shipping_address']
         _execute("INSERT INTO user_booking VALUES(null, %s, %s, %s, %s, %s, 'ADDED')", [lid, id, date.today(), shipping_address, total_amount_user])
         return HttpResponse("<script>alert('Added to cart.');window.location='/UserHome';</script>")
