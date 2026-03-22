@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block nav %}
+<nav>
+    <span style="font-size:20px;font-weight:700;">🌾 Smart Agriculture</span>
+    <div><a href="/">Home</a></div>
+</nav>
+{% endblock %}
+{% block content %}
+<div class="container" style="margin-top:48px;">
+    <div class="form-card">
+        <h2 style="text-align:center;">Login</h2>
+        <form action="/login1" method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <label>Username / ID</label>
+                <input type="text" name="un" placeholder="Enter your ID" required>
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" name="pass" placeholder="Enter password" required>
+            </div>
+            <button type="submit" class="submit-btn">Login</button>
+        </form>
+        <p style="text-align:center;margin-top:16px;font-size:13px;">
+            New customer? <a href="/adduser">Register here</a> |
+            Farmer? <a href="/register_farmer">Register here</a>
+        </p>
+    </div>
+</div>
+{% endblock %}
