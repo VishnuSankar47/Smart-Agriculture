@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block nav %}
+<nav>
+    <span style="font-size:20px;font-weight:700;">🌾 Smart Agriculture</span>
+    <div>
+        <a href="/login">Login</a>
+        <a href="/adduser">Register</a>
+        <a href="/register_farmer">Farmer Register</a>
+    </div>
+</nav>
+{% endblock %}
+{% block content %}
+<div class="container" style="text-align:center;margin-top:60px;">
+    <h1 style="color:#2d6a2d;font-size:36px;">Welcome to Smart Agriculture</h1>
+    <p style="margin-top:16px;font-size:16px;color:#555;">
+        Connecting farmers directly with customers — fresh produce, fair prices.
+    </p>
+    <div style="margin-top:32px;">
+        <a href="/login" class="btn btn-green" style="padding:12px 28px;font-size:16px;">Get Started</a>
+    </div>
+</div>
+{% endblock %}
