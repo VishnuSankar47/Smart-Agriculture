@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block nav %}
+<nav>
+    <span style="font-size:18px;font-weight:700;">🌾 Admin Panel</span>
+    <div><a href="/AdminHomePage">Dashboard</a><a href="/logout">Logout</a></div>
+</nav>
+{% endblock %}
+{% block content %}
+<div class="container" style="margin-top:40px;">
+    <div class="form-card">
+        <h2>Edit Category</h2>
+        {% for row in data %}
+        <form action="/updatecategory/{{ row.0 }}" method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <label>Category Name</label>
+                <input type="text" name="name" value="{{ row.1 }}" required>
+            </div>
+            <div class="form-group">
+                <label>Selling Price (₹)</label>
+                <input type="number" name="price" step="0.01" value="{{ row.2 }}" required>
+            </div>
+            <div class="form-group">
+                <label>Farmer Price (₹)</label>
+                <input type="number" name="farmer_price" step="0.01" value="{{ row.3 }}" required>
+            </div>
+            <button type="submit" class="submit-btn">Update</button>
+        </form>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
