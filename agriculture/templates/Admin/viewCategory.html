@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block nav %}
+<nav>
+    <span style="font-size:18px;font-weight:700;">🌾 Admin Panel</span>
+    <div><a href="/AdminHomePage">Dashboard</a><a href="/addCategory">Add Category</a><a href="/logout">Logout</a></div>
+</nav>
+{% endblock %}
+{% block content %}
+<div class="container">
+    <h2>Product Categories</h2>
+    <table>
+        <thead>
+            <tr><th>#</th><th>Name</th><th>Selling Price (₹)</th><th>Farmer Price (₹)</th><th>Actions</th></tr>
+        </thead>
+        <tbody>
+        {% for row in data %}
+            <tr>
+                <td>{{ row.0 }}</td><td>{{ row.1 }}</td><td>{{ row.2 }}</td><td>{{ row.3 }}</td>
+                <td>
+                    <a href="/editCategory/{{ row.0 }}" class="btn btn-blue">Edit</a>
+                    <a href="/deleteCategory/{{ row.0 }}" class="btn btn-red" style="margin-left:6px;">Delete</a>
+                </td>
+            </tr>
+        {% empty %}
+            <tr><td colspan="5" style="text-align:center;color:#888;">No categories added yet.</td></tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
