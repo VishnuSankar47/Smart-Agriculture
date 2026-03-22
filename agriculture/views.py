@@ -187,7 +187,7 @@ def AddFarmerproduct(request, id, pid):
     fid = request.session.get('hid')
     if request.method == "POST":
         quantity = request.POST['quantity']
-        total_amount = int(quantity) * int(pid)
+        total_amount = int(quantity) * int(float(pid))
         item_description = request.POST['item_description']
         _execute("INSERT INTO item_details VALUES(null, %s, %s, %s, %s, %s, 'pending', %s)", [id, fid, date.today(), quantity, total_amount, item_description])
         return HttpResponse("<script>alert('Item submitted.');window.location='/FarmerHome';</script>")
