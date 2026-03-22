@@ -129,7 +129,7 @@ After running the schema script, an admin account is seeded:
 
 This project was submitted as a final year project for the **Bachelor of Computer Science** degree at **Swamy Saswathikananda College, Poothotta** (affiliated to Mahatma Gandhi University), academic year 2021–2022.
 
-- **Author:** M Vishnu Sankar (190021030827)
+- **Author:** M Vishnusankar (190021030827)
 - **Guide:** Mrs. Bincy John, Assistant Professor, Dept. of Computer Science
 
 ---
