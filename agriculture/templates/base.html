@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Agriculture</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', sans-serif; background: #f4f6f0; color: #333; }
+        nav { background: #2d6a2d; color: white; padding: 12px 24px; display: flex; justify-content: space-between; align-items: center; }
+        nav a { color: white; text-decoration: none; margin-left: 16px; font-size: 14px; }
+        nav a:hover { text-decoration: underline; }
+        .container { max-width: 960px; margin: 32px auto; padding: 0 16px; }
+        h2 { color: #2d6a2d; margin-bottom: 20px; }
+        table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; }
+        th { background: #2d6a2d; color: white; padding: 10px 14px; text-align: left; }
+        td { padding: 10px 14px; border-bottom: 1px solid #eee; }
+        .btn { display: inline-block; padding: 7px 16px; border-radius: 4px; text-decoration: none; font-size: 13px; cursor: pointer; border: none; }
+        .btn-green { background: #2d6a2d; color: white; }
+        .btn-red { background: #c0392b; color: white; }
+        .btn-blue { background: #2471a3; color: white; }
+        .btn:hover { opacity: 0.85; }
+        .form-card { background: white; padding: 28px; border-radius: 8px; max-width: 480px; margin: 0 auto; box-shadow: 0 2px 8px rgba(0,0,0,.08); }
+        .form-group { margin-bottom: 16px; }
+        label { display: block; margin-bottom: 4px; font-size: 13px; font-weight: 600; }
+        input, select, textarea { width: 100%; padding: 9px 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; }
+        .submit-btn { width: 100%; padding: 10px; background: #2d6a2d; color: white; border: none; border-radius: 4px; font-size: 15px; cursor: pointer; }
+    </style>
+</head>
+<body>
+{% block nav %}{% endblock %}
+{% block content %}{% endblock %}
+</body>
+</html>
