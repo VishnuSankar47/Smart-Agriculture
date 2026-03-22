@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block nav %}
+<nav>
+    <span style="font-size:18px;font-weight:700;">🌾 Farmer Portal</span>
+    <div><a href="/FarmerHome">Dashboard</a><a href="/logout">Logout</a></div>
+</nav>
+{% endblock %}
+{% block content %}
+<div class="container">
+    <h2>My Approved Products</h2>
+    <table>
+        <thead>
+            <tr><th>#</th><th>Category ID</th><th>Date</th><th>Qty</th><th>Total (₹)</th><th>Description</th></tr>
+        </thead>
+        <tbody>
+        {% for row in data %}
+            <tr>
+                <td>{{ row.0 }}</td><td>{{ row.1 }}</td><td>{{ row.3 }}</td>
+                <td>{{ row.4 }}</td><td>{{ row.5 }}</td><td>{{ row.7 }}</td>
+            </tr>
+        {% empty %}
+            <tr><td colspan="6" style="text-align:center;color:#888;">No approved products yet.</td></tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
